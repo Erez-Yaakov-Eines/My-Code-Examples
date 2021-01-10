@@ -1,0 +1,22 @@
+parameters:
+- name: answerParam
+  type:
+    name: weekDays
+trainingPhrases:
+- ($answerParam 'monday' auto=false) next
+- next is ($answerParam 'sunday' auto=false)
+- ($answerParam 'Thursday' auto=false) comes next
+- ($answerParam 'friday' auto=false) maybe?
+- maybe ($answerParam 'thursday' auto=false)
+- I think it's ($answerParam 'wednesday' auto=false)
+- I think the answer is ($answerParam 'tuesday' auto=false)
+- the answer is ($answerParam 'saturday' auto=false)
+- I think ($answerParam 'Monday' auto=false)
+- I choose ($answerParam 'sunday' auto=false)
+- ($answerParam 'Saturday' auto=false)
+- ($answerParam 'Thursday' auto=false)
+- ($answerParam 'Wednesday' auto=false)
+- ($answerParam 'Tuesday' auto=false)
+- ($answerParam 'Monday' auto=false)
+- ($answerParam 'Sunday' auto=false)
+- ($answerParam 'Friday' auto=false)

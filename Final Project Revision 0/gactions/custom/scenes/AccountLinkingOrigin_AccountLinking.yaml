@@ -1,0 +1,26 @@
+conditionalEvents:
+- condition: session.params.AccountLinkingSlot == "LINKED"
+  transitionToScene: Start
+- condition: session.params.AccountLinkingSlot == "ERROR"
+  handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: i'm sorry, but a network error has occured. try again later.
+  transitionToScene: actions.scene.END_CONVERSATION
+- condition: session.params.AccountLinkingSlot == "REJECTED"
+  transitionToScene: actions.scene.END_CONVERSATION
+slots:
+- commitBehavior:
+    writeSessionParam: AccountLinkingSlot
+  config:
+    '@type': type.googleapis.com/google.actions.conversation.v3.SignInSpec
+    opt_context: To keep using English fun and games and recieve game summary e-mails
+  defaultValue:
+    sessionParam: AccountLinkingSlot
+  name: AccountLinkingSlot
+  required: true
+  type:
+    name: actions.type.AccountLinking

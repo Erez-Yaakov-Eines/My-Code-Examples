@@ -1,0 +1,72 @@
+conditionalEvents:
+- condition: "true"
+  handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: Would you like to play a game with me?
+            - speech: are you ready to play some games?
+intentEvents:
+- handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: Great! I love playing games.
+            - speech: Awesome! Games are my favorite.
+            - speech: Wonderful! I've been practicing all day long.
+  intent: "yes"
+  transitionToScene: NumberOfPlayers
+- handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: I hope you'll come back soon to play some more. goodbye.
+  intent: "no"
+  transitionToScene: actions.scene.END_CONVERSATION
+- handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: I couldn't hear an answer. do you still want to play a game
+                with me?
+            - speech: I'm sorry but I couldn't hear an answer. Will you play a game
+                with me?
+  intent: actions.intent.NO_INPUT_1
+- handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: '<speak> I''m not sure I understand. say: <break time=''0.5s''/>
+                Yes, I want to play, or: <break time=''0.5s''/> No, I don''t want
+                to play</speak>'
+  intent: actions.intent.NO_MATCH_2
+- handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: I'm sorry we couldn't start our game. you can try again later.
+                goodbye!
+  intent: actions.intent.NO_MATCH_FINAL
+- handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: Ok. see you soon.
+            - speech: sure. you can always come back later.
+  intent: actions.intent.CANCEL
+onEnter:
+  webhookHandler: initApp

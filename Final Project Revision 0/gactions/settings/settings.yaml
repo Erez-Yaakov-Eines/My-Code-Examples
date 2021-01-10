@@ -1,0 +1,26 @@
+accountLinking:
+  enableAccountCreation: true
+  linkingType: GOOGLE_SIGN_IN
+category: EDUCATION_AND_REFERENCE
+defaultLocale: en
+localizedSettings:
+  developerEmail: riorer.development@gmail.com
+  developerName: Ruppin
+  displayName: English fun and games
+  fullDescription: A fun and quick, sentence completion type game for improving complete
+    sentence English communication. Users choose a fun nickname and play in turns.
+  largeBannerImage: https://lh3.googleusercontent.com/2vrOSe5ZkItXg7wzR4zK0qO6dC_vDiUdhq08cjnNhxrdi_BHo3oP3qweRX2UWFjlxIOzu8OkYX1D
+  privacyPolicyUrl: https://docs.google.com/document/d/1rWc8lgW0D_Y2-Eyec9Gza-svh3DhEqqEJe1zP5LK-u0/edit?usp=sharing
+  pronunciation: English fun and games
+  sampleInvocations:
+  - Talk to English fun and games
+  shortDescription: Quick games for learning the english language
+  smallLogoImage: https://lh3.googleusercontent.com/_PFuHtQwgI5DhUN-SWcp89RzaCrEu-lKUbj_sr8i3JDdirDzLjX9QbEI0Oc5Zb1mXcbBKqjN2A6x
+  termsOfServiceUrl: https://docs.google.com/document/d/1b2as7YqM6L2IirKFL03E9MJsjVNMONlKcOT1xvOeVXs/edit?usp=sharing
+  voice: female_3
+  voiceLocale: en-US
+projectId: learning-english-final-project
+surfaceRequirements:
+  minimumRequirements:
+  - capability: AUDIO_OUTPUT
+  - capability: MEDIA_RESPONSE_AUDIO

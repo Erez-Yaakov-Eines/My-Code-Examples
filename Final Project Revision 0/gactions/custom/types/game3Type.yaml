@@ -1,0 +1,27 @@
+synonym:
+  entities:
+    cake:
+      synonyms:
+      - cake
+    date:
+      synonyms:
+      - date
+    gate:
+      synonyms:
+      - gate
+    gave:
+      synonyms:
+      - gave
+    maze:
+      synonyms:
+      - maze
+    name:
+      synonyms:
+      - name
+    snake:
+      synonyms:
+      - snake
+    vase:
+      synonyms:
+      - vase
+  matchType: EXACT_MATCH

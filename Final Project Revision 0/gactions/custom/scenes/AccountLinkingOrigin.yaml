@@ -1,0 +1,5 @@
+conditionalEvents:
+- condition: user.verificationStatus != "VERIFIED"
+  transitionToScene: AccountLinkingOrigin_AccountLinking
+- condition: user.verificationStatus == "VERIFIED"
+  transitionToScene: AccountLinkingOrigin_AccountLinking

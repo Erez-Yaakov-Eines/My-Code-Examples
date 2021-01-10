@@ -1,0 +1,33 @@
+parameters:
+- name: answerParam
+  type:
+    name: game2Type
+trainingPhrases:
+- I can take a bath in the
+- I can take a bath in the ($answerParam 'tub' auto=true)
+- my pig is in the
+- my frog is on the
+- I go to the park in a
+- my dad has a red
+- I take a nap on my
+- my ball is in the
+- I see the hot
+- my job is to
+- the dog is on my
+- ($answerParam 'bed' auto=false) maybe?
+- the answer is ($answerParam 'cot' auto=true)
+- ($answerParam 'dig' auto=true)
+- ($answerParam 'bed' auto=true)
+- ($answerParam 'log' auto=true)
+- i see the hot ($answerParam 'sun' auto=false)
+- my job is to ($answerParam 'dig' auto=false)
+- the dog is on my ($answerParam 'bed' auto=false)
+- my ball is in the ($answerParam 'bag' auto=false)
+- the frog is on the ($answerParam 'log' auto=false)
+- i take a nap on my ($answerParam 'cot' auto=false)
+- the answer is ($answerParam 'sun' auto=false)
+- my dad has a red ($answerParam 'pen' auto=false)
+- i go to the park in a ($answerParam 'van' auto=false)
+- my pig is in the ($answerParam 'mud' auto=false)
+- ($answerParam 'van' auto=false)
+- ($answerParam 'mud' auto=false)

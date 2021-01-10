@@ -1,0 +1,20 @@
+handlers:
+- name: checkAnswer
+- name: chooseName
+- name: askQuestion
+- name: initApp
+- name: example
+- name: printSummary
+- name: startGame
+- name: giveHint
+- name: enterUserNames
+- name: skipQuestion
+- name: pause
+- name: debugInstructions
+- name: validateGameNumber
+- name: numberOfPlayersNoMatch
+- name: nonTypeName
+- name: unfinishedSummary
+httpsEndpoint:
+  baseUrl: https://us-central1-learning-english-final-project.cloudfunctions.net/fulfillment
+  endpointApiVersion: 2

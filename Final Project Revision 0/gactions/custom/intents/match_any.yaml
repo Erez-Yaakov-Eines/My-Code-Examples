@@ -1,0 +1,6 @@
+parameters:
+- name: anyType
+  type:
+    name: anyType
+trainingPhrases:
+- ($anyType 'user utterance' auto=false)

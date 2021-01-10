@@ -1,0 +1,12 @@
+handler:
+  staticPrompt:
+    candidates:
+    - promptResponse:
+        firstSimple:
+          variants:
+          - speech: I'm sad to see you go. maybe we'll play again later. goodbye!
+          - speech: It was nice playing together. i'll see you soon.
+          - speech: This was lovely. I hope you have a nice day. see you later.
+          - speech: I sure had a good time. until next time. bye!
+  webhookHandler: unfinishedSummary
+transitionToScene: actions.scene.END_CONVERSATION

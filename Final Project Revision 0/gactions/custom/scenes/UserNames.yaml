@@ -1,0 +1,54 @@
+conditionalEvents:
+- condition: session.params.plainGameObject.currentUser <= session.params.plainGameObject.numberOfPlayers
+  handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: Player $session.params.plainGameObject.currentUser, what is
+                your user name?
+            - speech: Player $session.params.plainGameObject.currentUser, choose a
+                user name.
+            - speech: Player $session.params.plainGameObject.currentUser, How should
+                I call you?
+            - speech: Player $session.params.plainGameObject.currentUser, what user
+                name would you like to use?
+- condition: session.params.plainGameObject.currentUser > session.params.plainGameObject.numberOfPlayers
+  transitionToScene: GameSelection
+intentEvents:
+- handler:
+    webhookHandler: chooseName
+  intent: choose_user_name
+- handler:
+    webhookHandler: nonTypeName
+  intent: match_any_name
+- handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: That name won't work. choose a name from the app list.
+  intent: actions.intent.NO_MATCH_1
+- handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: That sure is a funny name, but I can't use it. can you choose
+                another?
+  intent: actions.intent.NO_MATCH_2
+- handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: I'm sorry we couldn't find a good name for you. you come back
+                later to play again, Goodbye!
+  intent: actions.intent.NO_MATCH_FINAL
+  transitionToScene: actions.scene.END_CONVERSATION
+onEnter:
+  webhookHandler: enterUserNames

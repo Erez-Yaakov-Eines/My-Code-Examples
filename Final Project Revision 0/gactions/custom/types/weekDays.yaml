@@ -1,0 +1,40 @@
+synonym:
+  entities:
+    Friday:
+      synonyms:
+      - Friday
+    Monday:
+      synonyms:
+      - Monday
+    Saturday:
+      synonyms:
+      - Saturday
+    Sunday:
+      synonyms:
+      - Sunday
+      - Big sean
+      - Yom Rishon
+      - Rishon
+      - you always shaun
+      - yoga sean
+      - Young Lee sean
+      - yongli zhang
+      - yo motion
+      - you impression
+      - lashawn
+      - leshan
+      - ali shan
+      - humiliation
+      - in what shaun
+      - Asian
+      - yongli sean
+    Thursday:
+      synonyms:
+      - Thursday
+    Tuesday:
+      synonyms:
+      - Tuesday
+    Wednesday:
+      synonyms:
+      - Wednesday
+  matchType: EXACT_MATCH

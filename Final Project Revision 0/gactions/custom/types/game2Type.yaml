@@ -1,0 +1,44 @@
+synonym:
+  entities:
+    bag:
+      synonyms:
+      - bag
+      - big
+      - beg
+      - bug
+    bed:
+      synonyms:
+      - bed
+    cot:
+      synonyms:
+      - cot
+      - cut
+      - caught
+      - quote
+      - cart
+    dig:
+      synonyms:
+      - dig
+    log:
+      synonyms:
+      - log
+    mud:
+      synonyms:
+      - mud
+    pen:
+      synonyms:
+      - pen
+    sun:
+      synonyms:
+      - sun
+      - soon
+    tub:
+      synonyms:
+      - tub
+      - tab
+      - tuba
+      - tube
+    van:
+      synonyms:
+      - van
+  matchType: EXACT_MATCH

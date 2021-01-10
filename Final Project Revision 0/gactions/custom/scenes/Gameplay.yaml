@@ -1,0 +1,30 @@
+conditionalEvents:
+- condition: "true"
+  handler:
+    webhookHandler: askQuestion
+intentEvents:
+- handler:
+    webhookHandler: checkAnswer
+  intent: game1_answer
+- handler:
+    webhookHandler: checkAnswer
+  intent: game2_answer
+- handler:
+    webhookHandler: giveHint
+  intent: hint
+- handler:
+    webhookHandler: skipQuestion
+  intent: skip
+- handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: mmmmmmmm... what?
+  intent: match_any
+- handler:
+    webhookHandler: checkAnswer
+  intent: game3_answer
+onEnter:
+  webhookHandler: startGame

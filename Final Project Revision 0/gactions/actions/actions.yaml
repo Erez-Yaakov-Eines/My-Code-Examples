@@ -1,0 +1,6 @@
+custom:
+  actions.intent.MAIN: {}
+  debug_instructions: {}
+  end_game: {}
+  example: {}
+  pause: {}

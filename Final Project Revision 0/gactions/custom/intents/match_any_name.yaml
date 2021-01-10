@@ -1,0 +1,10 @@
+parameters:
+- name: anyType
+  type:
+    name: anyType
+trainingPhrases:
+- my user is ($anyType 'jason' auto=false)
+- my nickname is ($anyType 'stupid head' auto=false)
+- please call me ($anyType 'lord master' auto=false)
+- i'm ($anyType 'john' auto=false)
+- my ($game3Type1 'name' auto=true) is ($anyType 'mr banana face' auto=false)

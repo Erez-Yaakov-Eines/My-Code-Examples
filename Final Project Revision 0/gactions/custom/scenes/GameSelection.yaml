@@ -1,0 +1,34 @@
+conditionalEvents:
+- condition: scene.slots.status == "FINAL" && (session.params.gameNumber <= 0 || session.params.gameNumber
+    > session.params.plainGameObject.MAX_GAME)
+  handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: I can't find game $session.params.gameNumber in my game files.
+                choose a game between 1 and $session.params.plainGameObject.MAX_GAME.
+                try again?
+  transitionToScene: GameSelection
+- condition: scene.slots.status == "FINAL" && (session.params.gameNumber > 0 && session.params.gameNumber
+    <= session.params.plainGameObject.MAX_GAME)
+  transitionToScene: Gameplay
+onSlotUpdated:
+  webhookHandler: validateGameNumber
+slots:
+- commitBehavior:
+    writeSessionParam: gameNumberWriteback
+  name: gameNumber
+  promptSettings:
+    initialPrompt:
+      staticPrompt:
+        candidates:
+        - promptResponse:
+            firstSimple:
+              variants:
+              - speech: let's choose a game we can play together. which game do you
+                  want to play?
+  required: true
+  type:
+    name: gameNumber

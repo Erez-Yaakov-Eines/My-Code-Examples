@@ -1,0 +1,27 @@
+parameters:
+- name: myName
+  type:
+    name: userNames
+trainingPhrases:
+- I ($myName 'aurora' auto=true)
+- my ($game3Type1 'name' auto=true) ($myName 'mulan' auto=true)
+- my user ($myName 'Mulan' auto=true)
+- my name is
+- my name is ($myName 'Aurora' auto=true)
+- my name is ($myName 'tiana' auto=true)
+- my name is ($myName 'cinderella' auto=true)
+- my name is Samuel L Jackson
+- my nickname is ($myName 'tiana' auto=true)
+- I want to be called ($myName 'jasmine' auto=true)
+- call me ($myName 'belle' auto=true)
+- please call me ($myName 'belle' auto=true)
+- you can call me ($myName 'snow white' auto=true)
+- can I be ($myName 'mulan' auto=true)?
+- I want ($myName 'ariel' auto=true)
+- I am ($myName 'merida' auto=true)
+- ($myName 'pocahontas' auto=true)
+- i'm ($myName 'cinderella' auto=true)
+- my user name is ($myName 'rapunzel' auto=true)
+- you can call me ($myName 'moana' auto=true)
+- I want to be ($myName 'elsa' auto=true)
+- my name is ($myName 'anna' auto=true)

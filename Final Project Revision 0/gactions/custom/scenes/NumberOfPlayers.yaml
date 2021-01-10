@@ -1,0 +1,72 @@
+conditionalEvents:
+- condition: scene.slots.status == "FINAL" && (session.params.numberOfPlayers <= 0
+    || session.params.numberOfPlayers > session.params.plainGameObject.MAX_PLAYERS)
+  handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: choose a number between 1 and $session.params.plainGameObject.MAX_PLAYERS.
+                try Again?.
+            - speech: The number $session.params.numberOfPlayers won't work. try again?
+  transitionToScene: NumberOfPlayers
+- condition: scene.slots.status == "FINAL" && (session.params.numberOfPlayers > 0
+    && session.params.numberOfPlayers <= session.params.plainGameObject.MAX_PLAYERS)
+  handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: Very well. I will be ready for $session.params.numberOfPlayers
+                players.
+            - speech: Got it. $session.params.numberOfPlayers players!.
+            - speech: $session.params.numberOfPlayers players. No problem.
+  transitionToScene: UserNames
+intentEvents:
+- handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: i'm not sure I can use that as the number of players. can you
+                pick again?
+  intent: actions.intent.NO_MATCH_1
+- handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: I'm not sure I heard that number correctly. try one more time?
+  intent: actions.intent.NO_MATCH_2
+- handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: I'm unable to hear how many players want to play. I'm guessing
+                2 players. if I'm wrong, you can always say 'cancel', to quit playing.
+    webhookHandler: numberOfPlayersNoMatch
+  intent: actions.intent.NO_MATCH_FINAL
+  transitionToScene: UserNames
+slots:
+- commitBehavior:
+    writeSessionParam: numberOfPlayers
+  name: numberOfPlayers
+  promptSettings:
+    initialPrompt:
+      staticPrompt:
+        candidates:
+        - promptResponse:
+            firstSimple:
+              variants:
+              - speech: how many players are you today?
+              - speech: Tell me, how many players will be playing?
+              - speech: Please select the number of players.
+  required: true
+  type:
+    name: actions.type.Number

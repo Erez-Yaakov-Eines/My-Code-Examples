@@ -1,0 +1,23 @@
+parameters:
+- name: answerParam
+  type:
+    name: game3Type
+trainingPhrases:
+- ($answerParam 'name' auto=false)
+- ($answerParam 'maze' auto=false)
+- ($answerParam 'snake' auto=false)
+- ($answerParam 'gave' auto=false)
+- ($answerParam 'date' auto=false)
+- ($answerParam 'gate' auto=false)
+- ($answerParam 'cake' auto=false)
+- ($answerParam 'vase' auto=false)
+- I think it might be ($answerParam 'gate' auto=false)
+- the answer is ($answerParam 'gave' auto=false)
+- the ($answerParam 'snake' auto=false) has a long tongue
+- the bus is waiting at the ($answerParam 'gate' auto=false)
+- a pink flower is in the ($answerParam 'vase' auto=false)
+- I wrote the ($answerParam 'date' auto=false) in my book
+- the mice were lost in a ($answerParam 'maze' auto=false)
+- dad ($answerParam 'gave' auto=false) me an ice cream
+- my brother's ($answerParam 'name' auto=false) is ben
+- grandma will bake a ($answerParam 'cake' auto=false)

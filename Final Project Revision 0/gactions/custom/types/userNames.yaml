@@ -1,0 +1,54 @@
+synonym:
+  entities:
+    Anna:
+      synonyms:
+      - Anna
+    Ariel:
+      synonyms:
+      - Ariel
+    Aurora:
+      synonyms:
+      - Aurora
+    Belle:
+      synonyms:
+      - Belle
+    Cinderella:
+      synonyms:
+      - Cinderella
+    Elsa:
+      synonyms:
+      - Elsa
+    Jasmine:
+      synonyms:
+      - Jasmine
+    Kiara:
+      synonyms:
+      - Kiara
+    Kida:
+      synonyms:
+      - Kida
+    Merida:
+      synonyms:
+      - Merida
+    Moana:
+      synonyms:
+      - Moana
+    Mulan:
+      synonyms:
+      - Mulan
+    Nala:
+      synonyms:
+      - Nala
+    Pocahontas:
+      synonyms:
+      - Pocahontas
+    Rapunzel:
+      synonyms:
+      - Rapunzel
+    Snow White:
+      synonyms:
+      - Snow White
+    Tiana:
+      synonyms:
+      - Tiana
+  matchType: EXACT_MATCH
